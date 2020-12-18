@@ -7,11 +7,12 @@ function hasNetwork(online){
                         <ul>
                             <li>Checking the network cables, modem, and router</li>
                             <li>Reconnecting to Wi-Fi</li>
-                            <li><a href="#">Running Windows Network Diagnostics</a></li>
+                            <li><a href="javascript:diagnoseErrors()">Running Windows Network Diagnostics</a></li>
                         </ul>
                         <p>ERR_INTERNET_DISCONNECTED</p>
                         <button>Reload Page</button>`;
-    const successMsg = `<h1>Welcome to StudyBud</h1>`;
+    const successMsg = `<h1 class="logo">facebook 
+                         Connecting people together</h1>`;
 
     if(online){
         body.classList.remove("offline");
