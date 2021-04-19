@@ -6,6 +6,10 @@
    font-size: 100%;
 }
 
+body,.app{
+    overflow-wrap: break-word;
+}
+
 :root{
     --brand-color: #0095f6;
     --bg-color: #fff;
@@ -17,10 +21,10 @@
     transition: background-color 1.5s cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 
-@media (max-width: 420px) and (orientation: portrait), (max-height: 100vh){
+@media (max-width: 420px) and (orientation: portrait), (max-height: 560px){
 .app{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     padding: 1rem 0.6rem;
     justify-content: center;
     max-width: 100%;
@@ -34,7 +38,7 @@
 
 }
 
-@media (max-width: 768px) and (orientation: portrait),(max-height: 100vh) {
+@media (max-width: 768px) and (orientation: portrait),(max-height: 560px) {
     .app{
         display: flex;
         justify-content: center;
@@ -52,7 +56,7 @@
 }
 
 .app{
-    min-width: 100vw;
+    min-width: 100%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -64,19 +68,24 @@
      padding: 0.5rem 0;
      min-width: 30%;
      color: var(--color);
-     line-height: 32px;
-     margin: 0 auto;
+     line-height: 2.5;
 }
 
 h1{
     color: var(--heading-color);
     font-weight: 600;
-    max-width: 100%;
+    width: 100%;
     font-size: 200%;
+    text-align: center;
+}
+
+.status ul{
+    width: 100%;
 }
 
 .status ul li{
     width: 100%;
+    list-style-position: unset;
 }
 
 .status ul li a{

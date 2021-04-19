@@ -2,7 +2,7 @@
 function hasNetwork(online){
     const body = document.body;
     const status = document.querySelector(".status");
-    const errorMsg = `  <h1>No internet</h1>
+    const errorMsg =   `<h1>No Internet</h1>
                         <p>Try:</p>
                         <ul>
                             <li>Checking the network cables, modem, and router</li>
@@ -23,13 +23,14 @@ function hasNetwork(online){
     }
 }
 
+// Event-listener
 window.addEventListener("load",() => {
     hasNetwork(navigator.onLine);
-
+    //If browser is online,set hasNetwork to be true
     window.addEventListener("online",() => {
         hasNetwork(true);
     });
-
+     //If browser is offline,set hasNetwork to be false
     window.addEventListener("offline",() => {
         hasNetwork(false);
     });
